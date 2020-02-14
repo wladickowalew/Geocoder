@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TransportLayer : NSObject
 
-+(NSData*) getQuery;
-+(NSArray *) getObjectList;
++(NSData*) getQuery:(NSString *)name;
++(NSArray *) getObjectList:(NSString *)name;
 
 @end
 

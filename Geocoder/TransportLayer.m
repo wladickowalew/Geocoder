@@ -19,7 +19,7 @@ static NSString *t = @"https://geocode-maps.yandex.ru/1.x/?apikey=&format=json&g
 }
 
 +(NSString *)getURLWithName:(NSString *)name withCount:(int) count{
-    NSMutableString *url = SERVER;
+    NSMutableString *url = [[NSMutableString alloc] initWithString: SERVER];
     [url appendString:@"?"];
     [url appendString:@"format=json&"];
     [url appendFormat:@"apikey=%@&", [self getApiKey]];
@@ -29,12 +29,10 @@ static NSString *t = @"https://geocode-maps.yandex.ru/1.x/?apikey=&format=json&g
     return url;
 }
 
-+(NSData *) getQuery{
-    NSString *name = @"Смоленск";
-    name = [name stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLHostAllowedCharacterSet];
-    NSString *q = [NSString stringWithFormat:@"%@%@",t,name];
-    NSURL *url = [NSURL URLWithString:q];
-    NSLog(@"%@", q);
++(NSData *) getQuery:(NSString *)name{
+   
+    NSURL *url = [NSURL URLWithString:[self getURLWithName:name withCount:100]];
+    NSLog(@"%@", url);
     NSMutableURLRequest *request = [NSMutableURLRequest new];
     [request setHTTPMethod:@"GET"];
     [request setURL:url];
@@ -44,14 +42,14 @@ static NSString *t = @"https://geocode-maps.yandex.ru/1.x/?apikey=&format=json&g
     return data;
 }
 
-+(NSDictionary *) getData{
-    NSData *data = [self getQuery];
++(NSDictionary *) getData:(NSString *)name{
+    NSData *data = [self getQuery: name];
     NSDictionary *ans = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     return ans;
 }
 
-+(NSArray *) getObjectList{
-    NSDictionary *d = [self getData];
++(NSArray *) getObjectList:(NSString *)name{
+    NSDictionary *d = [self getData: name];
     return d[@"response"][@"GeoObjectCollection"][@"featureMember"];
 }
 

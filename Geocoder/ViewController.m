@@ -23,7 +23,7 @@
 }
 
 -(void) showResponse{
-    NSArray *geoObjects = [TransportLayer getObjectList];
+    NSArray *geoObjects = [TransportLayer getObjectList: @"Смоленск"];
     for (NSDictionary *obj in geoObjects) {
         NSDictionary *d = obj[@"GeoObject"];
         NSString *name = d[@"name"];
