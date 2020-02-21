@@ -22,9 +22,11 @@
     return self;
 }
 
-- (NSString *)description
-{
+- (NSString *)description{
     return [NSString stringWithFormat:@"name: %@, description: %@, ll: %@, %@", _name, _descr, _longitude, _latitude];
 }
 
+-(NSString *)getPos{
+    return [NSString stringWithFormat:@"long: %@, lat: %@",_longitude, _latitude];
+}
 @end

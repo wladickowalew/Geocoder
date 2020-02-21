@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F9C86BB23FFBDC800B34DBF /* GeoObjectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9C86BA23FFBDC800B34DBF /* GeoObjectCell.m */; };
+		3F9C86BE23FFCCA100B34DBF /* GeoObjectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9C86BD23FFCCA100B34DBF /* GeoObjectVC.m */; };
 		3FA1395C23F6780D00F57BC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1395B23F6780D00F57BC4 /* AppDelegate.m */; };
 		3FA1395F23F6780D00F57BC4 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1395E23F6780D00F57BC4 /* SceneDelegate.m */; };
 		3FA1396223F6780D00F57BC4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1396123F6780D00F57BC4 /* ViewController.m */; };
@@ -19,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F9C86B923FFBDC800B34DBF /* GeoObjectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoObjectCell.h; sourceTree = "<group>"; };
+		3F9C86BA23FFBDC800B34DBF /* GeoObjectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoObjectCell.m; sourceTree = "<group>"; };
+		3F9C86BC23FFCCA100B34DBF /* GeoObjectVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoObjectVC.h; sourceTree = "<group>"; };
+		3F9C86BD23FFCCA100B34DBF /* GeoObjectVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoObjectVC.m; sourceTree = "<group>"; };
 		3FA1395723F6780D00F57BC4 /* Geocoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geocoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA1395A23F6780D00F57BC4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3FA1395B23F6780D00F57BC4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -75,7 +81,11 @@
 				3FA1396123F6780D00F57BC4 /* ViewController.m */,
 				3FA53BE823FFAF4B006D74E5 /* GeoObject.h */,
 				3FA53BE923FFAF4B006D74E5 /* GeoObject.m */,
+				3F9C86B923FFBDC800B34DBF /* GeoObjectCell.h */,
+				3F9C86BA23FFBDC800B34DBF /* GeoObjectCell.m */,
 				3FA1396323F6780E00F57BC4 /* Main.storyboard */,
+				3F9C86BC23FFCCA100B34DBF /* GeoObjectVC.h */,
+				3F9C86BD23FFCCA100B34DBF /* GeoObjectVC.m */,
 				3FA1397323F678AC00F57BC4 /* TransportLayer.h */,
 				3FA1397423F678AC00F57BC4 /* TransportLayer.m */,
 				3FA1396623F6780F00F57BC4 /* Assets.xcassets */,
@@ -159,7 +169,9 @@
 				3FA1397523F678AC00F57BC4 /* TransportLayer.m in Sources */,
 				3FA1396223F6780D00F57BC4 /* ViewController.m in Sources */,
 				3FA53BEA23FFAF4B006D74E5 /* GeoObject.m in Sources */,
+				3F9C86BE23FFCCA100B34DBF /* GeoObjectVC.m in Sources */,
 				3FA1395C23F6780D00F57BC4 /* AppDelegate.m in Sources */,
+				3F9C86BB23FFBDC800B34DBF /* GeoObjectCell.m in Sources */,
 				3FA1396D23F6780F00F57BC4 /* main.m in Sources */,
 				3FA1395F23F6780D00F57BC4 /* SceneDelegate.m in Sources */,
 			);

@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma methods
 
 - (instancetype)initWithDictionary:(NSDictionary *)data;
+- (NSString *)getPos;
 
 @end
 

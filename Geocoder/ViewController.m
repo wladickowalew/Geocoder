@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "TransportLayer.h"
 #import "GeoObject.h"
+#import "GeoObjectCell.h"
+#import "GeoObjectVC.h"
 
 @interface ViewController (){
     NSMutableArray *data;
@@ -56,9 +58,22 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    [cell.textLabel setText:[data[indexPath.row] name] ];
+    GeoObjectCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    [cell cellUpdateWithGeoObject: data[indexPath.row]];
+    [cell setTag:indexPath.row];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"toMap"]){
+        GeoObjectVC *vc = [segue destinationViewController];
+        GeoObjectCell *cell = (GeoObjectCell *)sender;
+        [vc setGeoObject: data[[cell tag]]];
+    }
 }
 
 @end
