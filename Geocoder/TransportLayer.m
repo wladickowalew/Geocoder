@@ -12,8 +12,6 @@
 
 static NSString *const SERVER = @"https://geocode-maps.yandex.ru/1.x/";
 
-static NSString *t = @"https://geocode-maps.yandex.ru/1.x/?apikey=&format=json&geocode=";
-
 +(NSString *)getApiKey{
     return @"a880cf10-7c51-4526-9e32-517f6e45c777";
 }
