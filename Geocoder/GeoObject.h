@@ -12,10 +12,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GeoObject : NSObject
 
+#pragma properties
+
 @property NSString *name;
 @property NSString *descr;
 @property NSString *latitude;
 @property NSString *longitude;
+
+#pragma methods
+
+- (instancetype)initWithDictionary:(NSDictionary *)data;
 
 @end
 

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "TransportLayer.h"
+#import "GeoObject.h"
 
 @interface ViewController (){
     NSMutableArray *data;
@@ -40,13 +41,9 @@
     NSArray *geoObjects = [TransportLayer getObjectList: name];
     data = [NSMutableArray new];
     for (NSDictionary *obj in geoObjects) {
-        NSDictionary *d = obj[@"GeoObject"];
-        NSString *name = d[@"name"];
-        NSString *descr = d[@"description"];
-        NSString *pos = d[@"Point"][@"pos"];
-        NSString *ans = [NSString stringWithFormat: @"%@, %@, pos: %@", name, descr, pos];
-        NSLog(@"%@", ans);
-        [data addObject:ans];
+        GeoObject *g = [[GeoObject alloc] initWithDictionary:obj];
+        NSLog(@"%@", g);
+        [data addObject: g];
     }
 }
 
@@ -60,7 +57,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    [cell.textLabel setText:data[indexPath.row]];
+    [cell.textLabel setText:[data[indexPath.row] name] ];
     return cell;
 }
 
