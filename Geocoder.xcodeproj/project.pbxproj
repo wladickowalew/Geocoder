@@ -18,9 +18,11 @@
 		3FA1396D23F6780F00F57BC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1396C23F6780F00F57BC4 /* main.m */; };
 		3FA1397523F678AC00F57BC4 /* TransportLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1397423F678AC00F57BC4 /* TransportLayer.m */; };
 		3FA53BEA23FFAF4B006D74E5 /* GeoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA53BE923FFAF4B006D74E5 /* GeoObject.m */; };
+		AF88EC7671140CB1956DC5DE /* libPods-Geocoder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 619677DEFBC81B1F74587AA6 /* libPods-Geocoder.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07322BBEF51E347A7F965EC2 /* Pods-Geocoder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geocoder.release.xcconfig"; path = "Target Support Files/Pods-Geocoder/Pods-Geocoder.release.xcconfig"; sourceTree = "<group>"; };
 		3F9C86B923FFBDC800B34DBF /* GeoObjectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoObjectCell.h; sourceTree = "<group>"; };
 		3F9C86BA23FFBDC800B34DBF /* GeoObjectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoObjectCell.m; sourceTree = "<group>"; };
 		3F9C86BC23FFCCA100B34DBF /* GeoObjectVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoObjectVC.h; sourceTree = "<group>"; };
@@ -41,6 +43,8 @@
 		3FA1397423F678AC00F57BC4 /* TransportLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransportLayer.m; sourceTree = "<group>"; };
 		3FA53BE823FFAF4B006D74E5 /* GeoObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoObject.h; sourceTree = "<group>"; };
 		3FA53BE923FFAF4B006D74E5 /* GeoObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoObject.m; sourceTree = "<group>"; };
+		619677DEFBC81B1F74587AA6 /* libPods-Geocoder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Geocoder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		902DF9F2C281A8BB6CF68AF8 /* Pods-Geocoder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geocoder.debug.xcconfig"; path = "Target Support Files/Pods-Geocoder/Pods-Geocoder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,17 +52,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF88EC7671140CB1956DC5DE /* libPods-Geocoder.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3916B3F91C89A82F44BD0DD0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				902DF9F2C281A8BB6CF68AF8 /* Pods-Geocoder.debug.xcconfig */,
+				07322BBEF51E347A7F965EC2 /* Pods-Geocoder.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3E5A50BB01B0C9CA2DAF89EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				619677DEFBC81B1F74587AA6 /* libPods-Geocoder.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3FA1394E23F6780D00F57BC4 = {
 			isa = PBXGroup;
 			children = (
 				3FA1395923F6780D00F57BC4 /* Geocoder */,
 				3FA1395823F6780D00F57BC4 /* Products */,
+				3916B3F91C89A82F44BD0DD0 /* Pods */,
+				3E5A50BB01B0C9CA2DAF89EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FA1397023F6780F00F57BC4 /* Build configuration list for PBXNativeTarget "Geocoder" */;
 			buildPhases = (
+				94824A2A756E64862D185410 /* [CP] Check Pods Manifest.lock */,
 				3FA1395323F6780D00F57BC4 /* Sources */,
 				3FA1395423F6780D00F57BC4 /* Frameworks */,
 				3FA1395523F6780D00F57BC4 /* Resources */,
+				B8D2EABC0C5D9CE73BAFF3D8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -160,6 +187,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		94824A2A756E64862D185410 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Geocoder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8D2EABC0C5D9CE73BAFF3D8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Geocoder/Pods-Geocoder-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Geocoder/Pods-Geocoder-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Geocoder/Pods-Geocoder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3FA1395323F6780D00F57BC4 /* Sources */ = {
@@ -311,6 +380,7 @@
 		};
 		3FA1397123F6780F00F57BC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 902DF9F2C281A8BB6CF68AF8 /* Pods-Geocoder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -327,6 +397,7 @@
 		};
 		3FA1397223F6780F00F57BC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07322BBEF51E347A7F965EC2 /* Pods-Geocoder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
