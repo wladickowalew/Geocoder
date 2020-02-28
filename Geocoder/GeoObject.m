@@ -17,16 +17,16 @@
     _descr = d[@"description"];
     NSString *pos = d[@"Point"][@"pos"];
     NSArray *ll = [pos componentsSeparatedByString:@" "];
-    _longitude = ll[0];
-    _latitude  = ll[1];
+    _longitude = [ll[0] floatValue];
+    _latitude  = [ll[1] floatValue];
     return self;
 }
 
 - (NSString *)description{
-    return [NSString stringWithFormat:@"name: %@, description: %@, ll: %@, %@", _name, _descr, _longitude, _latitude];
+    return [NSString stringWithFormat:@"name: %@, description: %@, ll: %f, %f", _name, _descr, _longitude, _latitude];
 }
 
 -(NSString *)getPos{
-    return [NSString stringWithFormat:@"long: %@, lat: %@",_longitude, _latitude];
+    return [NSString stringWithFormat:@"long: %f, lat: %f",_longitude, _latitude];
 }
 @end

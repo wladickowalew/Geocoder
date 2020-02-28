@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Ceocoder-->
+        <!--Geocoder-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -76,7 +76,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Ceocoder" id="odR-6P-0WU"/>
+                    <navigationItem key="navigationItem" title="Geocoder" id="odR-6P-0WU"/>
                     <connections>
                         <outlet property="searchTF" destination="nuO-Ia-4Q4" id="3Ae-rE-zSR"/>
                         <outlet property="table" destination="yFk-FD-RwO" id="Ucg-Ez-m7O"/>

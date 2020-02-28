@@ -16,8 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property NSString *name;
 @property NSString *descr;
-@property NSString *latitude;
-@property NSString *longitude;
+@property float latitude;
+@property float longitude;
 
 #pragma methods
 
